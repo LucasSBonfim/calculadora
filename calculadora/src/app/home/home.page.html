@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Caluladora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div>
+      <div style="margin: 10px;" size="12">
+        <input class="input" [(ngModel)]="dados.valor1" placeholder="Digite aqui" type="number">
+      </div>
+      <div style="margin: 10px;" size="12">
+        <label>{{botao}}</label>
+      </div>
+      <div style="margin: 10px;" size="12">
+        <input class="input" [(ngModel)]="dados.valor2" placeholder="Digite aqui" type="number">
+      </div>
+      <div style="margin: 10px; justify-content: center; display: flex;">
+        <ion-select [(ngModel)]="dados.formula" class="select">
+          <ion-select-option value="+">Soma</ion-select-option>
+          <ion-select-option value="-">Subtração</ion-select-option>
+          <ion-select-option value="X">Multiplicação</ion-select-option>
+          <ion-select-option value="/">Divisão</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+    <div style="margin: 10px;">
+      <button (click)="calcular()">=</button>
+    </div>
+  </div>
+</ion-content>
